@@ -38,10 +38,11 @@ int *read_int_deltas(char *fname, int *len){
 		*len = result;
 		return NULL;
 	}
+	int total_bytes = sb.st_size;
 	FILE *fin = fopen(fname,"r");
-	int *darr = (int *)malloc(sb.st_size);
-	len = sb.st_size/sizeof(int);
-	for(int i=0;i<sb.st_size/sizeof(int);i++){
+	int *darr = (int *)malloc(total_bytes);
+	len = total_bytes/sizeof(int);
+	for(int i=0;i<total_bytes/sizeof(int);i++){
 		if(i == 0){
 			fread(&darr[i],sizeof(int),1,fin);
 		}else{
