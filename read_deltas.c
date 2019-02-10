@@ -11,7 +11,6 @@ int *read_text_deltas(char *fname, int *len){
         *len = -1;
         return NULL;
     }
-	size++;
     while(success != EOF){
         success = fscanf(fin,"%d",&data);
         size++;
@@ -23,8 +22,7 @@ int *read_text_deltas(char *fname, int *len){
         if(i == 0){
             fscanf(fin,"%d",&data);
             darr[i] = data;
-        }
-        else{
+        }else{
             fscanf(fin,"%d",&data);
             darr[i] = darr[i-1] + data;
         }
@@ -33,12 +31,26 @@ int *read_text_deltas(char *fname, int *len){
     return darr;
 }
 int *read_int_deltas(char *fname, int *len){
-	FILE *fin = fopen(fname,"r");
+	struct stat sb;
 	int data;
-	int success,size = 0;
-	
+	int result = stat(fname,&sb);
+	if(result==-1 || sb.st_size < sizeof(int)){
+		*len = result;
+		return NULL;
+	}
+	FILE *fin = fopen(fname,"r");
+	int *darr = (int *)malloc(sb.st_size);
+	len = sb.st_size/sizeof(int);
+	for(int i=0;i<sb.st_size/sizeof(int);i++){
+		if(i == 0){
+			fread(&darr[i],sizeof(int),1,fin);
+		}else{
+			fread(&data,sizeof(int),1,fin);
+			darr[i] = darr[i-1] + data;
+		}
+	}
 	fclose(fin);
-	return 0;	
+	return darr;	
 }
 int *read_4bit_deltas(char *fname, int *len){
 	return 0;
