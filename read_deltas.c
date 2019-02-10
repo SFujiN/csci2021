@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <sys/stat.h>
 #include "deltas.h"
 
 int *read_text_deltas(char *fname, int *len){
@@ -7,7 +8,7 @@ int *read_text_deltas(char *fname, int *len){
     int data,success;
     int size = 0;
 	success = fscanf(fin,"%d",&data);
-    if(fin == NULL && success == EOF){
+    if(fin == NULL || success == EOF){
         *len = -1;
         return NULL;
     }
@@ -41,7 +42,7 @@ int *read_int_deltas(char *fname, int *len){
 	int total_bytes = sb.st_size;
 	FILE *fin = fopen(fname,"r");
 	int *darr = (int *)malloc(total_bytes);
-	len = total_bytes/sizeof(int);
+	*len = total_bytes/sizeof(int);
 	for(int i=0;i<total_bytes/sizeof(int);i++){
 		if(i == 0){
 			fread(&darr[i],sizeof(int),1,fin);
