@@ -8,7 +8,7 @@ int *read_text_deltas(char *fname, int *len){
     int data,success;
     int size = 0;
 	success = fscanf(fin,"%d",&data);
-    if(fin == NULL || success == EOF){
+    if(fin == NULL || success == 0 || success == -1){
         *len = -1;
         return NULL;
     }
