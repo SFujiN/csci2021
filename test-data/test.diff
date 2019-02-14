@@ -1,43 +1,46 @@
-Reading text format						Reading text format
-length: 128							length: 128
-min: 2								min: 2
-max: 98								max: 98
-range: 96							range: 96
-max_height: 32							max_height: 32
-units_per_height: 3.00						units_per_height: 3.00
-     +----+----+----+----+----+----+----+----+----+----+----+	     +----+----+----+----+----+----+----+----+----+----+----+
- 98 |                                                        	 98 |                                                        
- 95 |                       X    X             X             	 95 |                       X    X             X             
- 92 |                       X    X            XX      X     X	 92 |                       X    X            XX      X     X
- 89 |     X                 X    X            XX   X  X     X	 89 |     X                 X    X            XX   X  X     X
- 86 |     X                 X    X           XXX   X  X    XX	 86 |     X                 X    X           XXX   X  X    XX
- 83 |  X  X       X  X      X    X      X    XXX   X  X    XX	 83 |  X  X       X  X      X    X      X    XXX   X  X    XX
- 80 |  X  X       X  X      X    X      X    XXX   X  X    XX	 80 |  X  X       X  X      X    X      X    XXX   X  X    XX
- 77 |  X  X  X    X  XX     X    X    X X    XXX   X XX    XX	 77 |  X  X  X    X  XX     X    X    X X    XXX   X XX    XX
- 74 |  X  X  X    X  XX     X    X    X X    XXX  XX XXX   XX	 74 |  X  X  X    X  XX     X    X    X X    XXX  XX XXX   XX
- 71 |  X  X  X X  X  XX     X    XX   X X    XXX  XXXXXX   XX	 71 |  X  X  X X  X  XX     X    XX   X X    XXX  XXXXXX   XX
- 68 |  X  X  X X  X  XX     X    XX   X X    XXX  XXXXXX   XX	 68 |  X  X  X X  X  XX     X    XX   X X    XXX  XXXXXX   XX
- 65 |  X  X  X X  X  XX     X    XX   X X    XXX  XXXXXX  XXX	 65 |  X  X  X X  X  XX     X    XX   X X    XXX  XXXXXX  XXX
- 62 |  X  X  X X  X  XX     X    XX   XXX    XXX  XXXXXX  XXX	 62 |  X  X  X X  X  XX     X    XX   XXX    XXX  XXXXXX  XXX
- 59 |  X  XXXX X  X  XX     X    XX   XXX    XXX  XXXXXX XXXX	 59 |  X  XXXX X  X  XX     X    XX   XXX    XXX  XXXXXX XXXX
- 56 |  X  XXXX X  X  XX     X    XX  XXXX    XXX  XXXXXX XXXX	 56 |  X  XXXX X  X  XX     X    XX  XXXX    XXX  XXXXXX XXXX
- 53 |  X  XXXX X  X XXX     X    XX  XXXX    XXX XXXXXXX XXXX	 53 |  X  XXXX X  X XXX     X    XX  XXXX    XXX XXXXXXX XXXX
- 50 |  X  XXXX X  X XXX    XX    XX  XXXX    XXX XXXXXXX XXXX	 50 |  X  XXXX X  X XXX    XX    XX  XXXX    XXX XXXXXXX XXXX
- 47 |  X  XXXX X  X XXX    XX    XXX XXXX  X XXX XXXXXXX XXXX	 47 |  X  XXXX X  X XXX    XX    XXX XXXX  X XXX XXXXXXX XXXX
- 44 |  X  XXXX X  X XXX    XX    XXX XXXX  X XXX XXXXXXX XXXX	 44 |  X  XXXX X  X XXX    XX    XXX XXXX  X XXX XXXXXXX XXXX
- 41 |  X XXXXX X  X XXX    XX   XXXX XXXX  X XXX XXXXXXX XXXX	 41 |  X XXXXX X  X XXX    XX   XXXX XXXX  X XXX XXXXXXX XXXX
- 38 |  X XXXXX XX X XXX    XX   XXXX XXXX  X XXX XXXXXXX XXXX	 38 |  X XXXXX XX X XXX    XX   XXXX XXXX  X XXX XXXXXXX XXXX
- 35 |  X XXXXX XX X XXX X  XX   XXXX XXXX  X XXX XXXXXXXXXXXX	 35 |  X XXXXX XX X XXX X  XX   XXXX XXXX  X XXX XXXXXXXXXXXX
- 32 |  X XXXXX XX X XXX X  XX X XXXX XXXX  X XXX XXXXXXXXXXXX	 32 |  X XXXXX XX X XXX X  XX X XXXX XXXX  X XXX XXXXXXXXXXXX
- 29 |  X XXXXX XX X XXX X  XX X XXXX XXXX  X XXX XXXXXXXXXXXX	 29 |  X XXXXX XX X XXX X  XX X XXXX XXXX  X XXX XXXXXXXXXXXX
- 26 |  XXXXXXX XX X XXX X  XX X XXXX XXXX  X XXX XXXXXXXXXXXX	 26 |  XXXXXXX XX X XXX X  XX X XXXX XXXX  X XXX XXXXXXXXXXXX
- 23 |  XXXXXXX XXXX XXX X  XX X XXXX XXXXX X XXX XXXXXXXXXXXX	 23 |  XXXXXXX XXXX XXX X  XX X XXXX XXXXX X XXX XXXXXXXXXXXX
- 20 |  XXXXXXX XXXX XXXXX  XXXX XXXX XXXXX X XXX XXXXXXXXXXXX	 20 |  XXXXXXX XXXX XXXXX  XXXX XXXX XXXXX X XXX XXXXXXXXXXXX
- 17 |X XXXXXXXXXXXXXXXXXX  XXXX XXXX XXXXX X XXXXXXXXXXXXXXXX	 17 |X XXXXXXXXXXXXXXXXXX  XXXX XXXX XXXXX X XXXXXXXXXXXXXXXX
- 14 |X XXXXXXXXXXXXXXXXXXXXXXXX XXXX XXXXXXX XXXXXXXXXXXXXXXX	 14 |X XXXXXXXXXXXXXXXXXXXXXXXX XXXX XXXXXXX XXXXXXXXXXXXXXXX
- 11 |X XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXX XXXXXXXXXXXXXXXX	 11 |X XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXX XXXXXXXXXXXXXXXX
-  8 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXX	  8 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXX
-  5 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX	  5 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  2 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX	  2 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-     +----+----+----+----+----+----+----+----+----+----+----+	     +----+----+----+----+----+----+----+----+----+----+----+
-     0    5    10   15   20   25   30   35   40   45   50   5	     0    5    10   15   20   25   30   35   40   45   50   5
+***EXPECT OUTPUT***		      |	***ACTUAL OUTPUT***
+BST Demo				BST Demo
+Commands:				Commands:
+  print:          shows contents of t	  print:          shows contents of t
+  clear:          eliminates all elem	  clear:          eliminates all elem
+  quit:           exit the program	  quit:           exit the program
+  add <name>:     inserts the given s	  add <name>:     inserts the given s
+  find <name>:    prints FOUND if the	  find <name>:    prints FOUND if the
+  preorder:       prints contents of 	  preorder:       prints contents of 
+  save <file>:    writes the contents	  save <file>:    writes the contents
+  load <file>:    clears the current 	  load <file>:    clears the current 
+BST> add Kyle				BST> add Kyle
+BST> add Stan				BST> add Stan
+BST> add Cartman			BST> add Cartman
+BST> clear				BST> clear
+BST> add Kenny				BST> add Kenny
+BST> add Butters			BST> add Butters
+BST> add Token				BST> add Token
+BST> add Wendy				BST> add Wendy
+BST> add MrGarrison			BST> add MrGarrison
+BST> print				BST> print
+    Wendy				    Wendy
+  Token					  Token
+    MrGarrison				    MrGarrison
+Kenny					Kenny
+  Butters				  Butters
+BST> preorder				BST> preorder
+Kenny					Kenny
+  Butters				  Butters
+  Token					  Token
+    MrGarrison				    MrGarrison
+    Wendy				    Wendy
+BST> clear				BST> clear
+BST> print				BST> print
+				      >	    
+				      >	  `„‘Ìÿ
+				      >	     ƒ‘Ìÿ
+				      >	Àƒ‘Ìÿ
+				      >	  
+BST> preorder				BST> preorder
+				      >	Àƒ‘Ìÿ
+				      >	  
+				      >	  `„‘Ìÿ
+				      >	     ƒ‘Ìÿ
+				      >	    
+BST> quit				BST> quit

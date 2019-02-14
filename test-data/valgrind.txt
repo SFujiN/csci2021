@@ -1,58 +1,1328 @@
-==1928== Memcheck, a memory error detector
-==1928== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==1928== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
-==1928== Command: ./graph_file text test-data/input.in 32
-==1928== 
-==1928== error calling PR_SET_PTRACER, vgdb might block
-Reading text format
-length: 128
-min: 2
-max: 98
-range: 96
-max_height: 32
-units_per_height: 3.00
-     +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+--
- 98 |                                                                                       X                                        
- 95 |                       X    X             X                                 X          X                                        
- 92 |                       X    X            XX      X     X                    X          X         X                              
- 89 |     X                 X    X            XX   X  X     X                  X X          X  X    X X                            X 
- 86 |     X                 X    X           XXX   X  X    XX                  X X          X  X    X X                            X 
- 83 |  X  X       X  X      X    X      X    XXX   X  X    XX                  X X          X  X XX X X X      X        X          X 
- 80 |  X  X       X  X      X    X      X    XXX   X  X    XX            X     X X          X  X XX X X X      X        X          X 
- 77 |  X  X  X    X  XX     X    X    X X    XXX   X XX    XX            X     X XX         X  X XX X X X     XX     X  X          X 
- 74 |  X  X  X    X  XX     X    X    X X    XXX  XX XXX   XX  X        XX     X XX         XX X XX X X X X   XX     X  X          X 
- 71 |  X  X  X X  X  XX     X    XX   X X    XXX  XXXXXX   XX  X        XX     X XX         XX X XX X X X X   XX     X  X X        X 
- 68 |  X  X  X X  X  XX     X    XX   X X    XXX  XXXXXX   XX  X        XX     X XX         XX X XX X X X X   XX     X  X X        X 
- 65 |  X  X  X X  X  XX     X    XX   X X    XXX  XXXXXX  XXX  X X      XX     X XX         XXXX XX X X X X   XX    XX  X X        X 
- 62 |  X  X  X X  X  XX     X    XX   XXX    XXX  XXXXXX  XXX  X X      XX     X XX         XXXX XX X X X X   XX    XX  X X X      X 
- 59 |  X  XXXX X  X  XX     X    XX   XXX    XXX  XXXXXX XXXX  X X      XX  X XX XX         XXXX XX X X X X   XX    XX XX X X      X 
- 56 |  X  XXXX X  X  XX     X    XX  XXXX    XXX  XXXXXX XXXX  X X      XX  X XX XX         XXXX XX X X X X   XX    XX XX X X      X 
- 53 |  X  XXXX X  X XXX     X    XX  XXXX    XXX XXXXXXX XXXX  X X   X  XX  X XX XX         XXXX XX X X X X   XX    XX XX X X      X 
- 50 |  X  XXXX X  X XXX    XX    XX  XXXX    XXX XXXXXXX XXXX  X X   X  XX  X XX XX         XXXX XX X X X X   XX    XX XXXX X   X  X 
- 47 |  X  XXXX X  X XXX    XX    XXX XXXX  X XXX XXXXXXX XXXX  X X   X  XX  XXXX XX     X  XXXXX XX X X X X   XX    XX XXXX X   X XX 
- 44 |  X  XXXX X  X XXX    XX    XXX XXXX  X XXX XXXXXXX XXXX  X X   X  XX  XXXX XX  X  X  XXXXX XX X X X X   XX    XX XXXX XX  X XX 
- 41 |  X XXXXX X  X XXX    XX   XXXX XXXX  X XXX XXXXXXX XXXX  X X  XX  XX  XXXX XX  X  X  XXXXX XXXX XXX X   XX    XX XXXX XX  X XX 
- 38 |  X XXXXX XX X XXX    XX   XXXX XXXX  X XXX XXXXXXX XXXX  X X  XXX XX  XXXX XX  X  X  XXXXX XXXXXXXXXX   XX    XXXXXXX XX  X XX 
- 35 |  X XXXXX XX X XXX X  XX   XXXX XXXX  X XXX XXXXXXXXXXXX  X X  XXX XX  XXXX XXXXX  X  XXXXX XXXXXXXXXX  XXX    XXXXXXX XX  X XX 
- 32 |  X XXXXX XX X XXX X  XX X XXXX XXXX  X XXX XXXXXXXXXXXX  X X  XXX XX  XXXX XXXXX  X  XXXXX XXXXXXXXXX  XXX    XXXXXXXXXX  X XX 
- 29 |  X XXXXX XX X XXX X  XX X XXXX XXXX  X XXX XXXXXXXXXXXX  XXX  XXX XX  XXXX XXXXX  X  XXXXX XXXXXXXXXX  XXX    XXXXXXXXXX  X XX 
- 26 |  XXXXXXX XX X XXX X  XX X XXXX XXXX  X XXX XXXXXXXXXXXX  XXX  XXX XXX XXXX XXXXXX X  XXXXX XXXXXXXXXX  XXX    XXXXXXXXXX  X XX 
- 23 |  XXXXXXX XXXX XXX X  XX X XXXX XXXXX X XXX XXXXXXXXXXXX  XXX  XXX XXX XXXXXXXXXXX X  XXXXX XXXXXXXXXX  XXX    XXXXXXXXXX  X XXX
- 20 |  XXXXXXX XXXX XXXXX  XXXX XXXX XXXXX X XXX XXXXXXXXXXXX  XXX  XXX XXX XXXXXXXXXXX X  XXXXX XXXXXXXXXXX XXX    XXXXXXXXXX  X XXX
- 17 |X XXXXXXXXXXXXXXXXXX  XXXX XXXX XXXXX X XXXXXXXXXXXXXXXX  XXX  XXX XXX XXXXXXXXXXX X  XXXXX XXXXXXXXXXX XXX   XXXXXXXXXXX  X XXX
- 14 |X XXXXXXXXXXXXXXXXXXXXXXXX XXXX XXXXXXX XXXXXXXXXXXXXXXXX XXX  XXX XXXXXXXXXXXXXXX X XXXXXX XXXXXXXXXXX XXX   XXXXXXXXXXX XXXXXX
- 11 |X XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXX XXXXXXXXXXXXXXXXX XXX  XXX XXXXXXXXXXXXXXX X XXXXXX XXXXXXXXXXXXXXXXX XXXXXXXXXXX XXXXXX
-  8 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXX XXX  XXX XXXXXXXXXXXXXXXXX XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXX
-  5 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  2 |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-     +----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+--
-     0    5    10   15   20   25   30   35   40   45   50   55   60   65   70   75   80   85   90   95   100  105  110  115  120  125  
-==1928== 
-==1928== HEAP SUMMARY:
-==1928==     in use at exit: 0 bytes in 0 blocks
-==1928==   total heap usage: 4 allocs, 4 frees, 9,256 bytes allocated
-==1928== 
-==1928== All heap blocks were freed -- no leaks are possible
-==1928== 
-==1928== For counts of detected and suppressed errors, rerun with: -v
-==1928== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==680== Memcheck, a memory error detector
+==680== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==680== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==680== Command: ./tree_main -echo
+==680== 
+==680== error calling PR_SET_PTRACER, vgdb might block
+BST Demo
+Commands:
+  print:          shows contents of the tree in reverse sorted order
+  clear:          eliminates all elements from the tree
+  quit:           exit the program
+  add <name>:     inserts the given string into the tree, duplicates ignored
+  find <name>:    prints FOUND if the name is in the tree, NOT FOUND otherwise
+  preorder:       prints contents of the tree in pre-order which is how it will be saved
+  save <file>:    writes the contents of the tree in pre-order to the given file
+  load <file>:    clears the current tree and loads the one in the given file
+BST> add Mary
+BST> add James
+BST> add Elizabeth
+BST> add Barbara
+BST> add Anthony
+BST> add Andrew
+BST> add Amanda
+BST> add Alexander
+BST> add Aaron
+BST> add Adam
+BST> add Abigail
+BST> add Albert
+BST> add Alan
+BST> add Alice
+BST> add Alexis
+BST> add Amy
+BST> add Amber
+BST> add Andrea
+BST> add Anna
+BST> add Angela
+BST> add Ann
+BST> add Ashley
+BST> add Arthur
+BST> add Austin
+BST> add David
+BST> add Charles
+BST> add Betty
+BST> add Benjamin
+BST> add Carol
+BST> add Brian
+BST> add Brenda
+BST> add Brandon
+BST> add Billy
+BST> add Beverly
+BST> add Bobby
+BST> add Carl
+BST> add Bryan
+BST> add Bruce
+BST> add Brittany
+BST> add Catherine
+BST> add Carolyn
+BST> add Christopher
+BST> add Christine
+BST> add Christina
+BST> add Cheryl
+BST> add Christian
+BST> add Daniel
+BST> add Cynthia
+BST> add Danielle
+BST> add Dorothy
+BST> print
+ Mary
+  James
+   Elizabeth
+    Dorothy
+    David
+     Danielle
+     Daniel
+      Cynthia
+     Christopher
+      Christine
+       Christina
+        Christian
+        Cheryl
+     Charles
+      Catherine
+       Carolyn
+      Carol
+       Carl
+        Bryan
+         Bruce
+          Brittany
+       Brian
+        Brenda
+         Brandon
+          Bobby
+          Billy
+           Beverly
+      Betty
+       Benjamin
+    Barbara
+     Austin
+     Ashley
+      Arthur
+     Anthony
+      Anna
+       Ann
+       Angela
+      Andrew
+       Andrea
+       Amy
+        Amber
+       Amanda
+        Alice
+         Alexis
+        Alexander
+         Albert
+          Alan
+         Adam
+          Abigail
+         Aaron
+BST> add Donald
+BST> add Deborah
+BST> add Debra
+BST> add Dennis
+BST> add Denise
+BST> add Diane
+BST> add Diana
+BST> add Donna
+BST> add Doris
+BST> add Edward
+BST> add Douglas
+BST> add Dylan
+BST> add George
+BST> add Emily
+BST> add Gary
+BST> add Eric
+BST> add Emma
+BST> add Frank
+BST> add Evelyn
+BST> add Ethan
+BST> add Eugene
+BST> add Frances
+BST> add Gabriel
+BST> add Helen
+BST> add Gregory
+BST> add Gerald
+BST> add Gloria
+BST> add Grace
+BST> add Heather
+BST> add Harold
+BST> add Hannah
+BST> add Harry
+BST> add Jacob
+BST> add Jack
+BST> add Henry
+BST> add Jacqueline
+BST> add John
+BST> add Jennifer
+BST> add Jason
+BST> add Janet
+BST> add Jane
+BST> add Janice
+BST> add Jeffrey
+BST> add Jean
+BST> add Jessica
+BST> add Jerry
+BST> add Jeremy
+BST> add Jesse
+BST> add Joan
+BST> print
+ Mary
+  John
+   Joan
+   Jessica
+    Jesse
+    Jerry
+     Jeremy
+   Jennifer
+    Jeffrey
+     Jean
+    Jason
+     Janice
+     Janet
+      Jane
+  James
+   Jacqueline
+   Jacob
+    Jack
+     Henry
+   Helen
+    Heather
+     Harry
+     Harold
+      Hannah
+    Gregory
+     Grace
+     Gloria
+     Gerald
+   George
+    Gary
+     Gabriel
+     Frank
+      Frances
+      Evelyn
+       Eugene
+       Ethan
+     Eric
+      Emma
+    Emily
+   Elizabeth
+    Edward
+     Dylan
+     Douglas
+    Dorothy
+     Doris
+     Donna
+     Donald
+      Diane
+       Diana
+      Dennis
+       Denise
+      Debra
+      Deborah
+    David
+     Danielle
+     Daniel
+      Cynthia
+     Christopher
+      Christine
+       Christina
+        Christian
+        Cheryl
+     Charles
+      Catherine
+       Carolyn
+      Carol
+       Carl
+        Bryan
+         Bruce
+          Brittany
+       Brian
+        Brenda
+         Brandon
+          Bobby
+          Billy
+           Beverly
+      Betty
+       Benjamin
+    Barbara
+     Austin
+     Ashley
+      Arthur
+     Anthony
+      Anna
+       Ann
+       Angela
+      Andrew
+       Andrea
+       Amy
+        Amber
+       Amanda
+        Alice
+         Alexis
+        Alexander
+         Albert
+          Alan
+         Adam
+          Abigail
+         Aaron
+BST> BST> add Joe
+BST> add Linda
+BST> add Joseph
+BST> add Jonathan
+BST> add Johnny
+BST> add Jose
+BST> add Jordan
+BST> add Karen
+BST> add Joshua
+BST> add Justin
+BST> add Julie
+BST> add Joyce
+BST> add Judith
+BST> add Juan
+BST> add Julia
+BST> add Judy
+BST> add Kimberly
+BST> add Kenneth
+BST> add Kathleen
+BST> add Katherine
+BST> add Kelly
+BST> add Keith
+BST> add Kathryn
+BST> add Kayla
+BST> add Kevin
+BST> add Laura
+BST> add Larry
+BST> add Kyle
+BST> add Lauren
+BST> add Lawrence
+BST> add Margaret
+BST> add Lisa
+BST> add Madison
+BST> add Louis
+BST> add Lori
+BST> add Logan
+BST> add Mark
+BST> add Maria
+BST> add Marie
+BST> add Marilyn
+BST> add Martha
+BST> add Patricia
+BST> add Michael
+BST> add Matthew
+BST> add Melissa
+BST> add Megan
+BST> add Nancy
+BST> add Michelle
+BST> add Nicholas
+BST> add Nathan
+BST> add Natalie
+BST> add Pamela
+BST> add Nicole
+BST> add Olivia
+BST> add Noah
+BST> add Robert
+BST> add Richard
+BST> add Paul
+BST> add Patrick
+BST> add Rebecca
+BST> add Raymond
+BST> add Rachel
+BST> add Peter
+BST> add Philip
+BST> add Ralph
+BST> add Randy
+BST> add William
+BST> add Susan
+BST> add Sarah
+BST> add Sandra
+BST> add Ronald
+BST> add Roger
+BST> add Ryan
+BST> add Ruth
+BST> add Roy
+BST> add Rose
+BST> add Russell
+BST> add Samantha
+BST> add Samuel
+BST> add Sara
+BST> add Steven
+BST> add Stephanie
+BST> add Sharon
+BST> add Scott
+BST> add Sean
+BST> add Shirley
+BST> add Stephen
+BST> add Thomas
+BST> add Terry
+BST> add Teresa
+BST> add Theresa
+BST> add Timothy
+BST> add Tiffany
+BST> add Virginia
+BST> add Tyler
+BST> add Victoria
+BST> add Vincent
+BST> add Walter
+BST> add Wayne
+BST> add Zachary
+BST> add Willie
+BST> print
+ Zachary
+  Willie
+ William
+  Wayne
+  Walter
+  Virginia
+   Vincent
+   Victoria
+   Tyler
+  Timothy
+   Tiffany
+  Thomas
+   Theresa
+   Terry
+    Teresa
+  Susan
+   Steven
+    Stephen
+    Stephanie
+     Shirley
+     Sharon
+      Sean
+      Scott
+   Sarah
+    Sara
+    Sandra
+     Samuel
+     Samantha
+     Ryan
+      Ruth
+       Russell
+       Roy
+        Rose
+     Ronald
+      Roger
+ Robert
+  Richard
+   Rebecca
+    Raymond
+     Randy
+     Ralph
+     Rachel
+      Philip
+      Peter
+   Paul
+    Patrick
+ Patricia
+  Pamela
+   Olivia
+    Noah
+   Nicole
+  Nicholas
+   Nathan
+    Natalie
+  Nancy
+   Michelle
+  Michael
+   Melissa
+    Megan
+   Matthew
+ Mary
+  Martha
+  Mark
+   Marilyn
+   Marie
+   Maria
+  Margaret
+   Madison
+    Louis
+     Lori
+      Logan
+   Lisa
+  Linda
+   Lawrence
+   Lauren
+   Laura
+    Larry
+     Kyle
+   Kimberly
+    Kevin
+    Kenneth
+     Kelly
+      Keith
+       Kayla
+       Kathryn
+     Kathleen
+      Katherine
+   Karen
+    Justin
+     Julie
+      Julia
+       Judy
+      Judith
+       Juan
+      Joyce
+    Joshua
+   Joseph
+    Jose
+     Jordan
+    Jonathan
+     Johnny
+  John
+   Joe
+   Joan
+   Jessica
+    Jesse
+    Jerry
+     Jeremy
+   Jennifer
+    Jeffrey
+     Jean
+    Jason
+     Janice
+     Janet
+      Jane
+  James
+   Jacqueline
+   Jacob
+    Jack
+     Henry
+   Helen
+    Heather
+     Harry
+     Harold
+      Hannah
+    Gregory
+     Grace
+     Gloria
+     Gerald
+   George
+    Gary
+     Gabriel
+     Frank
+      Frances
+      Evelyn
+       Eugene
+       Ethan
+     Eric
+      Emma
+    Emily
+   Elizabeth
+    Edward
+     Dylan
+     Douglas
+    Dorothy
+     Doris
+     Donna
+     Donald
+      Diane
+       Diana
+      Dennis
+       Denise
+      Debra
+      Deborah
+    David
+     Danielle
+     Daniel
+      Cynthia
+     Christopher
+      Christine
+       Christina
+        Christian
+        Cheryl
+     Charles
+      Catherine
+       Carolyn
+      Carol
+       Carl
+        Bryan
+         Bruce
+          Brittany
+       Brian
+        Brenda
+         Brandon
+          Bobby
+          Billy
+           Beverly
+      Betty
+       Benjamin
+    Barbara
+     Austin
+     Ashley
+      Arthur
+     Anthony
+      Anna
+       Ann
+       Angela
+      Andrew
+       Andrea
+       Amy
+        Amber
+       Amanda
+        Alice
+         Alexis
+        Alexander
+         Albert
+          Alan
+         Adam
+          Abigail
+         Aaron
+BST> BST> BST> BST> BST> BST> BST> BST> BST> BST> BST> BST> BST> BST> BST> clear
+B==680== Invalid read of size 1
+==680==    at 0x4C33DA3: strcmp (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108C7A: bst_insert (tree_funcs.c:25)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680==  Address 0x522f0c0 is 0 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108C1D: bst_insert (tree_funcs.c:17)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108D0A: bst_insert (tree_funcs.c:38)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680==  Address 0x522f148 is 136 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108C1D: bst_insert (tree_funcs.c:17)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108D1A: bst_insert (tree_funcs.c:39)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680==  Address 0x522f148 is 136 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108C1D: bst_insert (tree_funcs.c:17)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108F13: node_print_revorder (tree_funcs.c:100)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f148 is 136 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108C1D: bst_insert (tree_funcs.c:17)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 1
+==680==    at 0x4C32CF2: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x4EBC9D1: puts (ioputs.c:35)
+==680==    by 0x108F4E: node_print_revorder (tree_funcs.c:104)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f0c0 is 0 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108C1D: bst_insert (tree_funcs.c:17)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 1
+==680==    at 0x4C32D04: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x4EBC9D1: puts (ioputs.c:35)
+==680==    by 0x108F4E: node_print_revorder (tree_funcs.c:104)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f0c1 is 1 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108C1D: bst_insert (tree_funcs.c:17)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 1
+==680==    at 0x4C371B8: mempcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x4EC7993: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1258)
+==680==    by 0x4EBCA8E: puts (ioputs.c:40)
+==680==    by 0x108F4E: node_print_revorder (tree_funcs.c:104)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f0c0 is 0 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108C1D: bst_insert (tree_funcs.c:17)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 1
+==680==    at 0x4C371C6: mempcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x4EC7993: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1258)
+==680==    by 0x4EBCA8E: puts (ioputs.c:40)
+==680==    by 0x108F4E: node_print_revorder (tree_funcs.c:104)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f0c2 is 2 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108C1D: bst_insert (tree_funcs.c:17)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108F5C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f140 is 128 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108C1D: bst_insert (tree_funcs.c:17)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108F13: node_print_revorder (tree_funcs.c:100)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f218 is 136 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108CB1: bst_insert (tree_funcs.c:30)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 1
+==680==    at 0x4C32CF2: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x4EBC9D1: puts (ioputs.c:35)
+==680==    by 0x108F4E: node_print_revorder (tree_funcs.c:104)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f190 is 0 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108CB1: bst_insert (tree_funcs.c:30)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 1
+==680==    at 0x4C32D04: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x4EBC9D1: puts (ioputs.c:35)
+==680==    by 0x108F4E: node_print_revorder (tree_funcs.c:104)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f191 is 1 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108CB1: bst_insert (tree_funcs.c:30)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108F5C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f210 is 128 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108CB1: bst_insert (tree_funcs.c:30)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108F13: node_print_revorder (tree_funcs.c:100)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f2e8 is 136 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108CB1: bst_insert (tree_funcs.c:30)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108F5C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f2e0 is 128 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108CB1: bst_insert (tree_funcs.c:30)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108F13: node_print_revorder (tree_funcs.c:100)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f3b8 is 136 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108CB1: bst_insert (tree_funcs.c:30)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108F5C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f3b0 is 128 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==    by 0x108BA4: main (tree_main.c:66)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108CB1: bst_insert (tree_funcs.c:30)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108F13: node_print_revorder (tree_funcs.c:100)
+==680==    by 0x108F23: node_print_revorder (tree_funcs.c:100)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f898 is 136 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E9F: node_remove_all (tree_funcs.c:83)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108D30: bst_insert (tree_funcs.c:41)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 1
+==680==    at 0x4C32CF2: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x4EBC9D1: puts (ioputs.c:35)
+==680==    by 0x108F4E: node_print_revorder (tree_funcs.c:104)
+==680==    by 0x108F23: node_print_revorder (tree_funcs.c:100)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==  Address 0x522f810 is 0 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E9F: node_remove_all (tree_funcs.c:83)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108D30: bst_insert (tree_funcs.c:41)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 1
+==680==    at 0x4C32D04: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x4EBC9D1: puts (ioputs.c:35)
+==680==    by 0x108F4E: node_print_revorder (tree_funcs.c:104)
+==680==    by 0x108F23: node_print_revorder (tree_funcs.c:100)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==  Address 0x522f811 is 1 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E9F: node_remove_all (tree_funcs.c:83)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108D30: bst_insert (tree_funcs.c:41)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108F5C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F23: node_print_revorder (tree_funcs.c:100)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==    by 0x108B5D: main (tree_main.c:58)
+==680==  Address 0x522f890 is 128 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108E72: node_remove_all (tree_funcs.c:80)
+==680==    by 0x108E9F: node_remove_all (tree_funcs.c:83)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E2C: bst_clear (tree_funcs.c:73)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108D30: bst_insert (tree_funcs.c:41)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108F13: node_print_revorder (tree_funcs.c:100)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F23: node_print_revorder (tree_funcs.c:100)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==  Address 0x522f968 is 136 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108EC1: node_remove_all (tree_funcs.c:87)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E9F: node_remove_all (tree_funcs.c:83)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108CB1: bst_insert (tree_funcs.c:30)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== Invalid read of size 8
+==680==    at 0x108F5C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F23: node_print_revorder (tree_funcs.c:100)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108F6C: node_print_revorder (tree_funcs.c:105)
+==680==    by 0x108EE4: bst_print_revorder (tree_funcs.c:92)
+==680==  Address 0x522f960 is 128 bytes inside a block of size 144 free'd
+==680==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108EC1: node_remove_all (tree_funcs.c:87)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E9F: node_remove_all (tree_funcs.c:83)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==    by 0x108E66: node_remove_all (tree_funcs.c:79)
+==680==  Block was alloc'd at
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108CB1: bst_insert (tree_funcs.c:30)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+ST> add Sandra
+add failed
+BST> add Ronald
+add failed
+BST> add Roger
+add failed
+BST> add Ryan
+add failed
+BST> add Ruth
+add failed
+BST> add Roy
+add failed
+BST> add Rose
+add failed
+BST> add Russell
+add failed
+BST> add Samantha
+add failed
+BST> add Samuel
+add failed
+BST> add Sara
+add failed
+BST> add Steven
+add failed
+BST> add Stephanie
+add failed
+BST> add Sharon
+add failed
+BST> add Scott
+add failed
+BST> add Sean
+add failed
+BST> add Shirley
+add failed
+BST> add Stephen
+add failed
+BST> add Thomas
+add failed
+BST> add Terry
+add failed
+BST> add Teresa
+add failed
+BST> add Theresa
+add failed
+BST> add Timothy
+add failed
+BST> add Tiffany
+add failed
+BST> add Virginia
+add failed
+BST> add Tyler
+add failed
+BST> add Victoria
+add failed
+BST> add Vincent
+add failed
+BST> add Walter
+add failed
+BST> add Wayne
+add failed
+BST> add Zachary
+add failed
+BST> add Willie
+add failed
+BST> BST> BST> BST> BST> BST> BST> BST> BST> BST> BST> print
+ Zachary
+  Willie
+ William
+  Wayne
+  Walter
+  Virginia
+   Vincent
+   Victoria
+   Tyler
+  Timothy
+   Tiffany
+  Thomas
+   Theresa
+   Terry
+    Teresa
+  Susan
+   Steven
+    Stephen
+    Stephanie
+     Shirley
+     Sharon
+      Sean
+      Scott
+   Sarah
+    Sara
+    Sandra
+     Samuel
+     Samantha
+     Ryan
+      Ruth
+       Russell
+       Roy
+        Rose
+     Ronald
+      Roger
+ Robert
+  Richard
+   Rebecca
+    Raymond
+     Randy
+     Ralph
+     Rachel
+      Philip
+      Peter
+   Paul
+    Patrick
+ Patricia
+  Pamela
+   Olivia
+    Noah
+   Nicole
+  Nicholas
+   Nathan
+    Natalie
+  Nancy
+   Michelle
+  Michael
+   Melissa
+    Megan
+   Matthew
+ Mary
+  Martha
+  Mark
+   Marilyn
+   Marie
+   Maria
+  Margaret
+   Madison
+    Louis
+     Lori
+      Logan
+   Lisa
+  Linda
+   Lawrence
+   Lauren
+   Laura
+    Larry
+     Kyle
+   Kimberly
+    Kevin
+    Kenneth
+     Kelly
+      Keith
+       Kayla
+       Kathryn
+     Kathleen
+      Katherine
+   Karen
+    Justin
+     Julie
+      Julia
+       Judy
+      Judith
+       Juan
+      Joyce
+    Joshua
+   Joseph
+    Jose
+     Jordan
+    Jonathan
+     Johnny
+  John
+   Joe
+   Joan
+   Jessica
+    Jesse
+    Jerry
+     Jeremy
+   Jennifer
+    Jeffrey
+     Jean
+    Jason
+     Janice
+     Janet
+      Jane
+  James
+   Jacqueline
+   Jacob
+    Jack
+     Henry
+   Helen
+    Heather
+     Harry
+     Harold
+      Hannah
+    Gregory
+     Grace
+     Gloria
+     Gerald
+   George
+    Gary
+     Gabriel
+     Frank
+      Frances
+      Evelyn
+       Eugene
+       Ethan
+     Eric
+      Emma
+    Emily
+   Elizabeth
+    Edward
+     Dylan
+     Douglas
+    Dorothy
+     Doris
+     Donna
+     Donald
+      Diane
+       Diana
+      Dennis
+       Denise
+      Debra
+      Deborah
+    David
+     Danielle
+     Daniel
+      Cynthia
+     Christopher
+      Christine
+       Christina
+        Christian
+        Cheryl
+     Charles
+      Catherine
+       Carolyn
+      Carol
+       Carl
+        Bryan
+         Bruce
+          Brittany
+       Brian
+        Brenda
+         Brandon
+          Bobby
+          Billy
+           Beverly
+      Betty
+       Benjamin
+    Barbara
+     Austin
+     Ashley
+      Arthur
+     Anthony
+      Anna
+       Ann
+       Angela
+      Andrew
+       Andrea
+       Amy
+        Amber
+       Amanda
+        Alice
+         Alexis
+        Alexander
+         Albert
+          Alan
+         Adam
+          Abigail
+         Aaron
+BST> BST> BST> BST> BST> BST> BST> BST> BST> 
+==680== 
+==680== HEAP SUMMARY:
+==680==     in use at exit: 27,216 bytes in 189 blocks
+==680==   total heap usage: 202 allocs, 13 frees, 36,992 bytes allocated
+==680== 
+==680== 12,240 bytes in 85 blocks are indirectly lost in loss record 1 of 3
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108D30: bst_insert (tree_funcs.c:41)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== 13,680 bytes in 95 blocks are indirectly lost in loss record 2 of 3
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108CB1: bst_insert (tree_funcs.c:30)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== 27,216 (1,296 direct, 25,920 indirect) bytes in 9 blocks are definitely lost in loss record 3 of 3
+==680==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==680==    by 0x108D30: bst_insert (tree_funcs.c:41)
+==680==    by 0x108AFB: main (tree_main.c:47)
+==680== 
+==680== LEAK SUMMARY:
+==680==    definitely lost: 1,296 bytes in 9 blocks
+==680==    indirectly lost: 25,920 bytes in 180 blocks
+==680==      possibly lost: 0 bytes in 0 blocks
+==680==    still reachable: 0 bytes in 0 blocks
+==680==         suppressed: 0 bytes in 0 blocks
+==680== 
+==680== For counts of detected and suppressed errors, rerun with: -v
+==680== ERROR SUMMARY: 268 errors from 24 contexts (suppressed: 0 from 0)

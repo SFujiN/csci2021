@@ -11,12 +11,6 @@ int *read_text_deltas(char *fname, int *len){
 			success = fscanf(fin,"%d",&data);
 		}
     if(fin == NULL || success == 0 || success == -1){
-		if(fin != NULL){
-			fclose(fin);
-		}
-        *len = -1;
-	}	
-    if(fin == NULL || success == 0 || success == -1){
         if(fin != NULL){
 			fclose(fin);
 		}
