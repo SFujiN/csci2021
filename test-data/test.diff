@@ -33,14 +33,14 @@ Kenny					Kenny
 BST> clear				BST> clear
 BST> print				BST> print
 				      >	    
-				      >	  `„‘Ìÿ
-				      >	     ƒ‘Ìÿ
-				      >	Àƒ‘Ìÿ
+				      >	  `äÍÿ
+				      >	     ãÍÿ
+				      >	ÀãÍÿ
 				      >	  
 BST> preorder				BST> preorder
-				      >	Àƒ‘Ìÿ
+				      >	ÀãÍÿ
 				      >	  
-				      >	  `„‘Ìÿ
-				      >	     ƒ‘Ìÿ
+				      >	  `äÍÿ
+				      >	     ãÍÿ
 				      >	    
 BST> quit				BST> quit

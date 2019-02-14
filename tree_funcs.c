@@ -74,13 +74,13 @@ void bst_clear(bst_t *cur){
 }
 
 void node_remove_all(node_t *cur){
-	node_t *ptr = cur;
-	if(ptr == NULL){
+	node_t *freeit = cur;
+	if(freeit == NULL){
 		return;
 	}
-	node_remove_all(ptr->left);
-	node_remove_all(ptr->right);
-	node_t *freeit = ptr;
+	node_remove_all(freeit->left);
+	node_remove_all(freeit->right);
+	// node_t *freeit = ptr;
 	free(freeit);
 }
 
