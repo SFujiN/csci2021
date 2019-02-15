@@ -114,5 +114,7 @@ int main(int argc, char *argv[]){
       printf("Unknown command \'%s\'\n",cmd);
     }
   }
+
+  bst_clear(&tree);
   return 0;
 }

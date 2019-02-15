@@ -11,12 +11,13 @@ void bst_init(bst_t *tree){
 
 int bst_insert(bst_t * tree, char name[]){
 	int diff = -1;
+	node_t *new_node;
 	node_t *cur = tree->root;
-	node_t *new_node = malloc(sizeof(node_t));
-	strcpy(new_node->name,name);
-	new_node->right = NULL;
-	new_node->left = NULL;
 	if(cur == NULL){
+		new_node = malloc(sizeof(node_t));
+		strcpy(new_node->name,name);
+		new_node->right = NULL;
+		new_node->left = NULL;
 		tree->root = new_node;
 		tree->size++;
 		return 1;
@@ -27,6 +28,10 @@ int bst_insert(bst_t * tree, char name[]){
 				if(cur->left != NULL){
 					cur = cur->left;
 				}else{
+					new_node = malloc(sizeof(node_t));
+					strcpy(new_node->name,name);
+					new_node->right = NULL;
+					new_node->left = NULL;
 					cur->left = new_node;
 					tree->size++;
 					return 1;
@@ -35,6 +40,10 @@ int bst_insert(bst_t * tree, char name[]){
 				if(cur->right != NULL){
 					cur = cur->right;
 				}else{
+					new_node = malloc(sizeof(node_t));
+					strcpy(new_node->name,name);
+					new_node->right = NULL;
+					new_node->left = NULL;
 					cur->right = new_node;
 					tree->size++;
 					return 1;
