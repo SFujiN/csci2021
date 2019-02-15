@@ -35,6 +35,7 @@ int main(int argc, char *argv[]){
       if(echo){
         printf("quit\n");
       }
+      bst_clear(&tree);
       break;
     }
 
@@ -46,7 +47,7 @@ int main(int argc, char *argv[]){
 
       success = bst_insert(&tree,cmd);
       if (!success) {
-        printf("add failed\n");
+        printf("insert failed\n");
       }
     }
 
@@ -64,6 +65,24 @@ int main(int argc, char *argv[]){
       }
 
       bst_print_preorder(&tree);
+    }
+
+    else if(strcmp("save", cmd)==0){
+      fscanf(stdin,"%s",cmd);
+      if(echo){
+        printf("save %s\n",cmd);
+      }
+
+      bst_save(&tree,cmd);
+    }
+
+    else if(strcmp("load", cmd)==0){
+      fscanf(stdin,"%s",cmd);
+      if(echo){
+        printf("load %s\n",cmd);
+      }
+
+      bst_load(&tree,cmd);
     }
 
     else if(strcmp("clear", cmd)==0){
@@ -88,7 +107,12 @@ int main(int argc, char *argv[]){
       }
     }
 
-
+    else{                                 // unknown command
+      if(echo){
+        printf("%s\n",cmd);
+      }
+      printf("Unknown command \'%s\'\n",cmd);
+    }
   }
   return 0;
 }
